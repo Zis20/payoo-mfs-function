@@ -20,3 +20,11 @@ function getTextFieldById(id) {
   const textNumber = parseFloat(textValue);
   return textNumber;
 }
+
+function showSectionById(id) {
+  document.getElementById("add-money-form").classList.add('hidden')
+  document.getElementById("cash-out-form").classList.add("hidden");
+  document.getElementById("t-section").classList.add("hidden");
+  //
+  document.getElementById(id).classList.remove("hidden");
+}
