@@ -5,7 +5,7 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    console.log("add btn clicked");
+    // console.log("add btn clicked");
 
     // getInputFieldValueById();
 
@@ -18,10 +18,13 @@ document
 
     const addMoney = getInputFieldValueById("input-add-money");
     const PinNumber = getInputFieldValueById("input-pin-number");
-    if (PinNumber === "1234") {
+    if (PinNumber === 1234) {
+      const balance = getTextFieldById("account-balance");
+      console.log(balance, addMoney);
+      const newBalance = balance + addMoney;
 
-    } 
-    else {
-        alert('failed to add the money')
+      document.getElementById("account-balance").innerText = newBalance;
+    } else {
+      alert("failed to add the money");
     }
   });
